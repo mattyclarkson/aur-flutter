@@ -1,0 +1,52 @@
+--- flutter-1.9.1.hotfix.2.src/packages/flutter_tools/lib/executable.dart	2019-09-10 03:03:25.000000000 +0100
++++ flutter-1.9.1.hotfix.2.patch/packages/flutter_tools/lib/executable.dart	2019-09-22 18:32:21.470581978 +0100
+@@ -18,7 +18,6 @@
+ import 'src/commands/assemble.dart';
+ import 'src/commands/attach.dart';
+ import 'src/commands/build.dart';
+-import 'src/commands/channel.dart';
+ import 'src/commands/clean.dart';
+ import 'src/commands/config.dart';
+ import 'src/commands/create.dart';
+@@ -35,16 +34,12 @@
+ import 'src/commands/logs.dart';
+ import 'src/commands/make_host_app_editable.dart';
+ import 'src/commands/packages.dart';
+-import 'src/commands/precache.dart';
+ import 'src/commands/run.dart';
+ import 'src/commands/screenshot.dart';
+ import 'src/commands/shell_completion.dart';
+ import 'src/commands/test.dart';
+ import 'src/commands/train.dart';
+ import 'src/commands/unpack.dart';
+-import 'src/commands/update_packages.dart';
+-import 'src/commands/upgrade.dart';
+-import 'src/commands/version.dart';
+ import 'src/runner/flutter_command.dart';
+ import 'src/web/compile.dart';
+ import 'src/web/web_runner.dart';
+@@ -67,7 +62,6 @@
+     AssembleCommand(),
+     AttachCommand(verboseHelp: verboseHelp),
+     BuildCommand(verboseHelp: verboseHelp),
+-    ChannelCommand(verboseHelp: verboseHelp),
+     CleanCommand(),
+     ConfigCommand(verboseHelp: verboseHelp),
+     CreateCommand(),
+@@ -84,16 +78,12 @@
+     LogsCommand(),
+     MakeHostAppEditableCommand(),
+     PackagesCommand(),
+-    PrecacheCommand(),
+     RunCommand(verboseHelp: verboseHelp),
+     ScreenshotCommand(),
+     ShellCompletionCommand(),
+     TestCommand(verboseHelp: verboseHelp),
+     TrainingCommand(),
+     UnpackCommand(),
+-    UpdatePackagesCommand(hidden: !verboseHelp),
+-    UpgradeCommand(),
+-    VersionCommand(),
+   ], verbose: verbose,
+      muteCommandLogging: muteCommandLogging,
+      verboseHelp: verboseHelp,

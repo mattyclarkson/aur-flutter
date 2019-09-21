@@ -3,3 +3,6 @@ flutter-*.log
 PKGBUILD-namcap.log
 pkg/
 src/
+flutter-*.patch/
+flutter-*.src/
+*.part
